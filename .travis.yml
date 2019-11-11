@@ -10,8 +10,8 @@ script: make
 
 addons:
   ssh_known_hosts:
-  - 100.88.106.7 #受信主机，你的Linux服务器ip
-
+  #- 100.88.106.7 #受信主机，你的Linux服务器ip
+  - 30.30.210.36
 before_install:
 - openssl aes-256-cbc -K $encrypted_dafae5a610c8_key -iv $encrypted_dafae5a610c8_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
@@ -19,5 +19,5 @@ before_install:
 #- echo -e "Host 主机IP\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 after_success:
-- ssh xiangkun.jxk@100.88.106.7  -o StrictHostKeyChecking=no 'cd ~/git/ci-test && git pull'   #使用ssh连接服务器
-
+#- ssh xiangkun.jxk@100.88.106.7  -o StrictHostKeyChecking=no 'cd ~/git/ci-test && git pull'   #使用ssh连接服务器
+- ssh xiangkun.jxk@30.30.210.36  -o StrictHostKeyChecking=no 'cd ~/git/ci-test && git pull'
