@@ -5,7 +5,7 @@ void fast_sort(int *ptr, int begin, int end);
   
 int main()  
 {  
-    int array[10] = {11, 25, 12, 4, 88, 55, 110, 3, 2, 21};  
+    int array[10] = {11, 25, 12, 4, 99, 55, 110, 3, 2, 21};  
     fast_sort(array, 0, 9);  
   
     //输出显示代码  
