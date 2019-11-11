@@ -8,10 +8,14 @@ before_script:
 
 script: make
 
+addons:
+  ssh_known_hosts:
+  - 100.88.106.7 #受信主机，你的Linux服务器ip
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_dafae5a610c8_key -iv $encrypted_dafae5a610c8_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
+#- chmod 600 ~/.ssh/id_rsa
 #- echo -e "Host 主机IP\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 after_success:
