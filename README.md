@@ -1,2 +1,2 @@
 # ci-test
-https://travis-ci.org/ajax4sec/ci-test.svg?branch=master
+[![Build Status](https://travis-ci.org/ajax4sec/ci-test.svg?branch=master)](https://travis-ci.org/ajax4sec/ci-test)
